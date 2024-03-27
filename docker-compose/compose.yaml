@@ -5,7 +5,7 @@ services:
       - "8080:5000"
     develop:
       watch:
-        - action: rebuild
+        - action: sync
           path: .
           target: /code
   redis:
