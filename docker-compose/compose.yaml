@@ -1,0 +1,12 @@
+services:
+  web:
+    build: .
+    ports:
+      - "8080:5000"
+    develop:
+      watch:
+        - action: rebuild
+          path: .
+          target: /code
+  redis:
+    image: "redis:alpine"
